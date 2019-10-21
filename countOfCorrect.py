@@ -14,8 +14,8 @@ countOfCorrect = {}
 for oneperm in allperm:
     sizeOfPermutation = sizeOfPermutation + 1
     numberOfCorrect = 0
-    for idx in range(1,n+1):
-        if idx == oneperm[idx-1]:
+    for idx, v in enumerate(oneperm, start=1):
+        if idx == v:
             numberOfCorrect = numberOfCorrect + 1
     if numberOfCorrect not in countOfCorrect.keys():
         countOfCorrect[numberOfCorrect] = 1
